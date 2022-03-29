@@ -4,6 +4,4 @@ The company Trackgenix SA provides software development services to other compan
 
 This company has asked us to develop a web system that facilitates the recording of hours worked by each employee in each project and work team.
 ## Week 2
-```
-landign creation for project Trackgenix by Lucas Prat
-```
+Landing page created for project Trackgenix by Lucas Prat

@@ -47,58 +47,58 @@
             typesetting industry. Lorem Ipsum has been the industry's tandard dummy text ever since the 1500s,
             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         </p>
-        <img src="D:\BaSP-M2022-Etapa-1\Semana-01\assets\computer.png" alt="computer">
+        <img src="./assets/computer.png" alt="computer">
     </section>
-    <section id="Functionalities">
-        <article id="hours">
+    <section>
+        <div>
             <h2>Hours</h2>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
-        </article>
-        <article id="reports">
+        </div>
+        <div>
             <h2>Reports</h2>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
-        </article>
-        <article id="resource management">
+        </div>
+        <div>
             <h2>Resource Management</h2>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
-        </article>
-        <article id="multiple roles">
+        </div>
+        <div>
             <h2>Multiple Roles</h2>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
-        </article>
+        </div>
     </section>
-    <section id="why choose us">
+    <section>
         <div>
-            <img src="D:\BaSP-M2022-Etapa-1\Semana-01\assets\icon-work-traceability.png" alt="Work Traceability">
+            <img src="./assets/icon-work-traceability.png" alt="Work Traceability">
             <h3>Work Traceability</h3>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
         </div>
         <div>
-            <img src="D:\BaSP-M2022-Etapa-1\Semana-01\assets\icon-Productivity-booster.png" alt="Productivity">
+            <img src="./assets/icon-Productivity-booster.png" alt="Productivity">
             <h3>Productivity Booster</h3>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
         </div>
         <div>
-            <img src="D:\BaSP-M2022-Etapa-1\Semana-01\assets\icon-decision-making.png" alt="Decision Making">
+            <img src="./assets/icon-decision-making.png" alt="Decision Making">
             <h3>Decision Making</h3>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             </p>
         </div>
         <div>
-            <img src="D:\BaSP-M2022-Etapa-1\Semana-01\assets\icon-leadership.png" alt="Leadership">
+            <img src="./assets/icon-leadership.png" alt="Leadership">
             <h3>Leadership and team management</h3>
             <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -108,30 +108,26 @@
     <section id="contact">
         <h2>Contact us for information about the system</h2>
         <form>
-            <p>
-                <input type="text" name="fname" required placeholder="First Name">
-                <input type="text" name="lname" required placeholder="Last Name">
-            </p>
-            <p>
-                <input type="email" required placeholder="Email">
-            </p>
-            <p>
-                <input list="area" name="Contact area" required placeholder="Contact Area">
-                <datalist id="area">
-                    <option value="Sales">
-                    <option value="Marketing">
-                    <option value="Human Resources">
-                    <option value="Development">
-                </datalist>
-            </p>
-            <p>
-                <textarea name="message" id="message" cols="30" rows="10" required>insert your message here</textarea>
-            </p>
+            <label for="fname">First Name</label>    
+            <input type="text" name="fname" required placeholder="Juan">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" required placeholder="Perez">
+            <label for="email">Email</label>
+            <input type="email" required placeholder="example@gmail.com">
+            <label for="contarea">Contact area</label>
+            <input list="area" name="contarea" required placeholder="Contact Area">
+            <datalist id="area">
+                <option value="Sales">
+                <option value="Marketing">
+                <option value="Human Resources">
+                <option value="Development">
+            </datalist>
+            <textarea name="message" id="message" cols="30" rows="10" required>insert your message here</textarea>
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
         </form>
     </section>
-    <section id="who we are">
+    <section>
         <h2>Who we are</h2>
         <p>
             RR time tracker is a web platform that help to manage time at work.
@@ -188,7 +184,7 @@
                 <img src="D:\BaSP-M2022-Etapa-1\Semana-01\assets\insta.png" alt="instagram">
             </a>
         </div>
-        <p><small>Copyright © 2022 Trackgenix S.A. All rigths reserved.</small></p>
+        <small>Copyright © 2022 Trackgenix S.A. All rigths reserved.</small>
     </footer>
 </body>
 </html>
