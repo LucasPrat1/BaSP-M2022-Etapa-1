@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 body {
-    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.4em;
     color: #373867;
 }
 
-a:link, a:visited a:active {
+a:link, a:visited, a:active {
     text-decoration: none;
 }
 
@@ -21,27 +20,37 @@ header {
 }
 
 .logo {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
 }
 
 aside {
+    position: fixed;
     float: left;
     top: 150px;
     width: 254px;
-    height: 3000px;
+    height: 100%;
     background: #373867;
     text-align: center;
+    padding-top: 50px;
+}
+
+aside img {
+    padding: 3px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 aside a {
+    padding-top: 20px;
+    display: inline-block;
+    vertical-align: middle;
     color: white
 }
 
 aside a:hover {
-    background: #B4AFAF;
-    color: #373867;
+    color: #46A37C;
     font-weight: 700;
 }
 
@@ -72,7 +81,7 @@ h3 {
 h2 {
     font-weight: 700;
     font-size: 24px;
-    line-height: 30px;
+    line-height: 36px;
 }
 
 .subtitle {
@@ -123,16 +132,19 @@ h2 {
     display: inline-block;
     width: 40%;
     height: 150px;
-    margin: 15px;
-    padding: 10px;
     text-align: center;
     vertical-align: middle;
+    padding: 10px;
+    margin: 10px;
 }
 
 .text-whychoseus {
     display: inline-block;
     text-align: center;
-    width: 70%;
+    width: 60%;
+    vertical-align: top;
+    margin-top: 5px;
+    padding: 10px;
 }
 
 
@@ -142,16 +154,30 @@ h2 {
     border-radius: 100%;
     width: 120px;
     height: 120px;
-    opacity: 50%;
+}
+
+.background-icon img {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
 }
 
 .falsohr {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     height: 2px;
     width: 90%;
     border-radius: 10PX;
     background-color: #7E7E7E;
+}
+
+form  {
+    margin: 50px;
+    margin-left: 100px;
+}
+
+#contact h2 {
+    margin-left: 200px;
 }
 
 input {
@@ -190,4 +216,40 @@ textarea {
 
 #b-reset {
     width: 150px;
+    margin-left: 30px;
+}
+
+.whoweare {
+    display: inline-block;
+    width: 70%;
+    margin: 30px 30px 30px 100px;
+    padding: 20px;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    filter: drop-shadow(0px 10px 10px rgba(55, 56, 103, 0.5));
+    vertical-align: middle;
+}
+.whoweare p {
+    color: black;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.list {
+    display: inline-block;
+    padding: 70px;
+    color: black;
+    margin: 10px 35px 10px;
+}
+
+footer {
+    margin-left: 254px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: #373867;
+    color: #F2F2F2;
+    text-align: center;
+    font-size: 12px;
+    line-height: 30px;
+    font-family: monospace;
 }
