@@ -63,6 +63,18 @@ h1 {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+h3 {
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
 .subtitle {
     margin-left: 50px;
     margin-top: 10px;
@@ -123,11 +135,6 @@ h1 {
     width: 70%;
 }
 
-.whychoseus h3 {
-    font-weight: 700;
-    font-size: 20px;
-    padding-bottom: 15px;
-}
 
 .background-icon {
     display: inline-block;
@@ -138,8 +145,6 @@ h1 {
     opacity: 50%;
 }
 
-
-
 .falsohr {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -147,4 +152,42 @@ h1 {
     width: 90%;
     border-radius: 10PX;
     background-color: #7E7E7E;
+}
+
+input {
+    padding: 10px;
+    display: inline-block;
+    width: 75%;
+    border-radius: 10px
+}
+
+label {
+    font-weight: bold;
+    padding: 10px;
+    display: inline-block;
+    width: 75%;
+    border-radius: 10px
+}
+
+textarea {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: inline-block;
+    width: 75%;
+    border-radius: 10px
+}
+
+.block-forms {
+    display: inline-block;
+    width: 42%;
+}
+
+#b-submit {
+    background-color: #AACE9B;
+    width: 150px;
+}
+
+#b-reset {
+    width: 150px;
 }

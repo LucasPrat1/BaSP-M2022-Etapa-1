@@ -130,10 +130,14 @@
             <section id="contact">
                 <h2>Contact us for information about the system</h2>
                 <form>
-                    <label for="fname">First Name</label>
-                    <input type="text" name="fname" required placeholder="Juan">
-                    <label for="lname">Last Name</label>
-                    <input type="text" name="lname" required placeholder="Perez">
+                    <div class="block-forms">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="fname" required placeholder="Juan">
+                    </div>
+                    <div class="block-forms">
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="lname" required placeholder="Perez">
+                    </div>
                     <label for="email">Email</label>
                     <input type="email" required placeholder="example@gmail.com">
                     <label for="contarea">Contact area</label>
@@ -145,10 +149,15 @@
                         <option value="Development">
                     </datalist>
                     <textarea name="message" id="message" cols="30" rows="10" required>insert your message here</textarea>
-                    <input type="submit" value="Submit">
-                    <input type="reset" value="Reset">
+                    <div class="block-forms">
+                        <input id="b-submit" type="submit" value="Submit">
+                    </div>
+                    <div class="block-forms">
+                        <input id="b-reset" type="reset" value="Reset">
+                    </div>
                 </form>
             </section>
+            <div class="falsohr"></div>
             <section>
                 <h2>Who we are</h2>
                 <p>
