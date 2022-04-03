@@ -5,6 +5,10 @@ body {
     color: #373867;
 }
 
+a:link, a:visited a:active {
+    text-decoration: none;
+}
+
 header {
     background: #46A37C;
     height: 150px;
@@ -31,13 +35,28 @@ aside {
     text-align: center;
 }
 
+aside a {
+    color: white
+}
+
+aside a:hover {
+    background: #B4AFAF;
+    color: #373867;
+    font-weight: 700;
+}
+
 main {
     margin-left: 300px;
     margin-top: 20px;
 }
 
+#home {
+    display: inline-block;
+}
+
 h1 {
     margin-left: 50px;
+    margin-top: 50px;
     font-weight: 700;
     font-size: 60px;
     line-height: 100px;
@@ -46,23 +65,86 @@ h1 {
 
 .subtitle {
     margin-left: 50px;
+    margin-top: 10px;
     font-size: 16px;
     line-height: 30px;
     color: #B4AFAF;
+}
+
+.p-home {
+    margin-top: 50px;
 }
 
 .img-home {
     float: right;
     width: 317px;
     height: 395px;
+    margin: 30px;
 }
 
 .funcionalities {
     display: inline-block;
-    width: 45%;
-    margin: 10px;
-    padding: 10px;
-    background-color: #B4AFAF;
+    width: 40%;
+    height: 150px;
+    margin: 25px;
+    padding: 20px;
+    background-color: #F2F2F2;
     border-radius: 10px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    text-align: center;
+    vertical-align: middle;
+}
+
+.funcionalities h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    color: #46A37C;
+}
+
+.funcionalities p {
+    padding-top: 20px;
+}
+
+.whychoseus {
+    display: inline-block;
+    width: 40%;
+    height: 150px;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-whychoseus {
+    display: inline-block;
+    text-align: center;
+    width: 70%;
+}
+
+.whychoseus h3 {
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.background-icon {
+    display: inline-block;
+    background-color: #B4AFAF;
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+    opacity: 50%;
+}
+
+
+
+.falsohr {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 2px;
+    width: 90%;
+    border-radius: 10PX;
+    background-color: #7E7E7E;
 }
