@@ -12,17 +12,19 @@ header {
     background: #46A37C;
     height: 150px;
     width: 100%;
-    text-indent: 350px;
+}
+
+header p {
     font-weight: 700;
     font-size: 40px;
-    line-height: 150px;
+    line-height: 50px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 350px;
+    padding-top: 50px;
 }
 
 .logo {
     position: fixed;
-    left: 0;
-    top: 0;
 }
 
 aside {
@@ -45,13 +47,12 @@ aside img {
 aside a {
     padding-top: 20px;
     display: inline-block;
-    vertical-align: middle;
-    color: white
+    color: white;
+    font-weight: bold;
 }
 
 aside a:hover {
     color: #46A37C;
-    font-weight: 700;
 }
 
 main {
@@ -64,7 +65,6 @@ main {
 }
 
 h1 {
-    margin-left: 50px;
     margin-top: 50px;
     font-weight: 700;
     font-size: 60px;
@@ -85,22 +85,18 @@ h2 {
 }
 
 .subtitle {
-    margin-left: 50px;
     margin-top: 10px;
+    margin-bottom: 50px;
     font-size: 16px;
     line-height: 30px;
     color: #B4AFAF;
-}
-
-.p-home {
-    margin-top: 50px;
 }
 
 .img-home {
     float: right;
     width: 317px;
     height: 395px;
-    margin: 30px;
+    margin: 30px 60px 30px 30px;
 }
 
 .funcionalities {
@@ -113,7 +109,6 @@ h2 {
     border-radius: 10px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     text-align: center;
-    vertical-align: middle;
 }
 
 .funcionalities h2 {
@@ -122,10 +117,7 @@ h2 {
     line-height: 40px;
     text-align: center;
     color: #46A37C;
-}
-
-.funcionalities p {
-    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .whychoseus {
@@ -140,7 +132,6 @@ h2 {
 
 .text-whychoseus {
     display: inline-block;
-    text-align: center;
     width: 60%;
     vertical-align: top;
     margin-top: 5px;
@@ -150,10 +141,11 @@ h2 {
 
 .background-icon {
     display: inline-block;
-    background-color: #B4AFAF;
+    background-color: #cccccc;
     border-radius: 100%;
     width: 120px;
     height: 120px;
+    filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.527));
 }
 
 .background-icon img {
@@ -163,21 +155,20 @@ h2 {
 }
 
 .falsohr {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    height: 2px;
+    margin: 30px 0 30px;
+    height: 3px;
     width: 90%;
     border-radius: 10PX;
     background-color: #7E7E7E;
 }
 
 form  {
+    text-align: center;
     margin: 50px;
-    margin-left: 100px;
 }
 
 #contact h2 {
-    margin-left: 200px;
+    text-align: center;
 }
 
 input {
@@ -188,11 +179,11 @@ input {
 }
 
 label {
+    text-align: left;
     font-weight: bold;
     padding: 10px;
     display: inline-block;
     width: 75%;
-    border-radius: 10px
 }
 
 textarea {
@@ -201,7 +192,10 @@ textarea {
     padding: 10px;
     display: inline-block;
     width: 75%;
-    border-radius: 10px
+    border-radius: 10px;
+    text-align: left;
+    font-family: 'arial';
+    opacity: 70%;
 }
 
 .block-forms {
@@ -212,6 +206,7 @@ textarea {
 #b-submit {
     background-color: #AACE9B;
     width: 150px;
+    font-weight: 500;
 }
 
 #b-reset {
@@ -222,10 +217,10 @@ textarea {
 .whoweare {
     display: inline-block;
     width: 70%;
-    margin: 30px 30px 30px 100px;
+    margin: 30px 100px 50px;
     padding: 20px;
     background-color: #F2F2F2;
-    border-radius: 10px;
+    border-radius: 15px;
     filter: drop-shadow(0px 10px 10px rgba(55, 56, 103, 0.5));
     vertical-align: middle;
 }
@@ -237,23 +232,33 @@ textarea {
 
 .list {
     display: inline-block;
-    padding: 70px;
+    width: 25%;
     color: black;
-    margin: 10px 35px 10px;
+    margin: 20px;
+    padding-left: 40px;
+}
+
+.list ul{
+    list-style-type:circle;
+}
+
+.list ol{
+    list-style-type:decimal;
 }
 
 footer {
     margin-left: 254px;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding: 20px;
     background-color: #373867;
     text-align: center;
-    font-size: 13px;
+    font-size: 11px;
     line-height: 30px;
     font-style: italic;
     color: hsla(0,0%,100%,.5);
 }
 
 footer img {
-    padding: 0 10px 0;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
 }
