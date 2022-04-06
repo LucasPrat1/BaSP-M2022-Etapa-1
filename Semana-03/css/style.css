@@ -8,6 +8,7 @@ a:link, a:visited, a:active {
     text-decoration: none;
 }
 
+/* ----HEADER----- */
 header {
     background: #46A37C;
     height: 150px;
@@ -29,6 +30,7 @@ header p {
     height: 150px;
 }
 
+/* ----ASIDE----- */
 aside {
     position: fixed;
     float: left;
@@ -36,19 +38,20 @@ aside {
     width: 20%;
     height: 100%;
     background: #373867;
-    text-align: center;
-    padding-top: 50px;
+}
+
+.container-aside {
+    margin: 10% 0% 0% 22%;
 }
 
 aside img {
-    padding: 3px;
-    margin-right: 5px;
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
+    margin-right: 10px;
 }
 
 aside a {
-    padding-top: 20px;
-    display: inline-block;
     color: white;
     font-weight: bold;
 }
@@ -57,10 +60,12 @@ aside a:hover {
     color: #46A37C;
 }
 
+/* ----MAIN----- */
 .test {
     margin-left: 22%;
     padding: 25px 0px 10px 0px;
     border-bottom: 1px solid black;
+    width: 76%;
 }
 
 #home {
@@ -99,9 +104,10 @@ h2 {
     float: right;
     width: 317px;
     height: 395px;
-    margin: 30px 60px 30px 30px;
+    margin: 30px;
 }
 
+/* ----FUNCIONALITIES----- */
 .funcionalities {
     display: inline-block;
     width: 40%;
@@ -123,18 +129,14 @@ h2 {
     padding-bottom: 20px;
 }
 
-.margin-whychoseus {
-    margin-left: 5%;
-}
-
+/* ----WHYCHOSEUS----- */
 .whychoseus {
     display: inline-block;
     width: 40%;
     height: 150px;
     text-align: center;
-    vertical-align: middle;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 20px 10px;
 }
 
 .text-whychoseus {
@@ -160,6 +162,7 @@ h2 {
     padding: 20px;
 }
 
+/* ----CONTACT----- */
 form  {
     text-align: left;
     margin: 50px 50px 50px 10%;
@@ -177,7 +180,6 @@ input {
 }
 
 label {
-    text-align: left;
     font-weight: bold;
     padding: 10px;
     display: inline-block;
@@ -212,6 +214,7 @@ textarea {
     margin-left: 30px;
 }
 
+/* ----WHO WE ARE----- */
 .whoweare {
     display: inline-block;
     width: 70%;
@@ -228,6 +231,7 @@ textarea {
     margin-bottom: 1.5em;
 }
 
+/* ----LISTAS----- */
 .list {
     display: inline-block;
     width: 25%;
@@ -244,6 +248,7 @@ textarea {
     list-style-type:decimal;
 }
 
+/* ----FOOTER----- */
 footer {
     margin-left: 20%;
     padding: 20px;
