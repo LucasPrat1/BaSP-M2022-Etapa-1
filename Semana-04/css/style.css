@@ -1,0 +1,19 @@
+body {
+  font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #373867;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none;
+}
+
+@media (max-width:1025px) {
+  aside {
+    display: none;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
