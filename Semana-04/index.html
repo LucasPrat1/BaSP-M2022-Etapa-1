@@ -15,10 +15,14 @@
     </head>
     <body>
         <header>
-            <div class="menu-container">
-                <img src="./assets/hamburguer.png" alt="Menu">
+            <div class="burger-container">
+                <div class="backgraound-burger">
+                    <img src="./assets/hamburguer.png" alt="Menu">
+                </div>
             </div>
-            <p>Trackgenix SA</p>
+            <div class="title-container">
+                <p>Trackgenix SA</p>
+            </div>
         </header>
         <aside>
             <img class="logo" src="./assets/header.png" alt="Logo">
@@ -49,18 +53,20 @@
         </aside>
         <main>
             <section id="home" class="container">
-                <!-- <img class="img-home" src="./assets/computer.png" alt="computer"> -->
-                <h1>Hi, we are Trackgenix</h1>
-                <p class="subtitle">THE BEST CHOICE FOR YOUR BUSINESS</p>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's tandard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's tandard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </p>
+                <div class="text-home">
+                    <h1>Hi, we are Trackgenix</h1>
+                    <p class="subtitle">THE BEST CHOICE FOR YOUR BUSINESS</p>
+                    <p class="p-home">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                        industry's tandard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's tandard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+                <img class="img-home" src="./assets/computer.png" alt="computer">
             </section>
-            <section class="test">
+            <section class="container container-funcionalities">
                 <div class="funcionalities">
                     <h2>Hours</h2>
                     <p>
@@ -86,7 +92,7 @@
                     </p>
                 </div>
             </section>
-            <!-- <section class="test">
+            <section class="container container-whychoseus">
                 <div class="whychoseus">
                     <div class="background-icon">
                         <img src="./assets/icon-work-traceability.png" alt="Work Traceability">
@@ -131,15 +137,15 @@
                         <img src="./assets/icon-leadership.png" alt="Leadership">
                     </div>
                 </div>
-            </section> -->
-            <section id="contact" class="test">
+            </section>
+            <section id="contact">
                 <h2>Contact us for information about the system</h2>
-                <form>
+                <form class="container">
                     <div class="block-forms">
                         <label for="fname">First Name</label>
                         <input type="text" name="fname" required placeholder="Juan">
                     </div>
-                    <div class="block-forms">
+                    <div class="block-forms">    
                         <label for="lname">Last Name</label>
                         <input type="text" name="lname" required placeholder="Perez">
                     </div>
@@ -154,13 +160,11 @@
                         <option value="Development">
                     </datalist>
                     <textarea name="message" cols="30" rows="10" required>insert your message here</textarea>
-                    <div>
-                        <input id="b-submit" type="submit" value="Submit">
-                        <input id="b-reset" type="reset" value="Reset">
-                    </div>
+                    <input id="b-submit" type="submit" value="Submit">
+                    <input id="b-reset" type="reset" value="Reset">
                 </form>
             </section>
-            <section class="test">
+            <section class="container">
                 <div class="whoweare">
                     <h2>Who we are</h2>
                     <p>

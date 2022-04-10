@@ -7,13 +7,44 @@ a:link, a:visited, a:active {
   text-decoration: none;
 }
 
-@media (max-width:1025px) {
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px 20px 0px;
+  border-bottom: 1px solid black;
+}
+
+@media (max-width:1024px) {
   aside {
     display: none;
   }
 }
 
-.container {
-  display: flex;
-  justify-content: center;
+@media (min-width:1024px) {
+  .burger-container {
+    display: none;
+  }
 }
+
+@media (max-width:768px) {
+  h1 {
+    text-align: center;
+  }
+  .subtitle {
+    text-align: center;
+  }
+  .p-home {
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+  }
+
+}
+@media (min-width:768px) {
+  .p-home {
+    margin: 20px 10px 20px 0px;
+    text-align: left;
+  }
+}
+
+
+
