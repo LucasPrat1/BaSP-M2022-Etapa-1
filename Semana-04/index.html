@@ -141,13 +141,15 @@
             <section id="contact">
                 <h2>Contact us for information about the system</h2>
                 <form class="container">
-                    <div class="block-forms">
-                        <label for="fname">First Name</label>
-                        <input type="text" name="fname" required placeholder="Juan">
-                    </div>
-                    <div class="block-forms">    
-                        <label for="lname">Last Name</label>
-                        <input type="text" name="lname" required placeholder="Perez">
+                    <div class="container-names">
+                        <div class="block-forms">
+                            <label for="fname">First Name</label>
+                            <input type="text" name="fname" required placeholder="Juan">
+                        </div>
+                        <div class="block-forms">    
+                            <label for="lname">Last Name</label>
+                            <input type="text" name="lname" required placeholder="Perez">
+                        </div>
                     </div>
                     <label for="email">Email</label>
                     <input type="email" required placeholder="example@gmail.com">
@@ -160,8 +162,10 @@
                         <option value="Development">
                     </datalist>
                     <textarea name="message" cols="30" rows="10" required>insert your message here</textarea>
-                    <input id="b-submit" type="submit" value="Submit">
-                    <input id="b-reset" type="reset" value="Reset">
+                    <div class="container-buttom">
+                        <input id="b-submit" type="submit" value="Submit">
+                        <input id="b-reset" type="reset" value="Reset">
+                    </div>
                 </form>
             </section>
             <section class="container">
@@ -179,7 +183,7 @@
                     </p>
                 </div>
             </section>
-            <section class="test">
+            <section class="container container-lists">
                 <div class="list">
                     <h3>Product</h3>
                     <ol>
