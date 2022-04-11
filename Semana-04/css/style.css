@@ -32,6 +32,12 @@ a:link, a:visited, a:active {
   .burger-container {
     display: none;
   }
+  main {
+    margin-left: 20%;
+  }
+  footer {
+    margin-left: 20%;
+  }
 }
 
 @media (max-width:768px) {

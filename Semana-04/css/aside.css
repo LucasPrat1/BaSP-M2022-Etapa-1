@@ -1,0 +1,39 @@
+aside {
+    position: fixed;
+    float: left;
+    width: 20%;
+    height: 100%;
+    background: #373867;
+}
+
+.logo {
+    position: fixed;
+    width: 20%;
+    height: 150px;
+}
+
+.container-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-aside {
+    padding: 10px;
+}
+
+.menu-aside img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+aside a {
+    color: white;
+    font-weight: bold;
+}
+
+aside a:hover {
+    color: #46A37C;
+}
