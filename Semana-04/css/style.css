@@ -32,14 +32,17 @@ a:link, a:visited, a:active {
 }
 
 @media (min-width:1024px) {
-  .burger-container {
-    display: none;
-  }
   main {
     margin-left: 20%;
   }
   footer {
     margin-left: 20%;
+  }
+  .logo-container {
+    display: flex;
+  }
+  .burger-container {
+    display: none;
   }
 }
 
