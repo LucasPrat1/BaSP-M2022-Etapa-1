@@ -26,6 +26,9 @@ a:link, a:visited, a:active {
   aside {
     display: none;
   }
+  .logo-container {
+    display: none;
+  }
 }
 
 @media (min-width:1024px) {
@@ -48,14 +51,11 @@ a:link, a:visited, a:active {
     text-align: center;
   }
   .p-home {
-    margin: 10px 0px 10px 0px;
     text-align: center;
   }
-
 }
 @media (min-width:768px) {
   .p-home {
-    margin: 20px 10px 20px 0px;
     text-align: left;
   }
 }

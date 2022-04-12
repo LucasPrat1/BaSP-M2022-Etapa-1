@@ -23,16 +23,13 @@ h3 {
   padding-bottom: 15px;
 }
 
-#home {
-  flex-wrap: wrap;
-}
-
 .text-home {
   display: flex;
   flex-direction: column;
   max-width: 64%;
   min-width: 300px;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 .subtitle {
@@ -46,6 +43,11 @@ h3 {
 
 .img-home {
   max-width: 250px;
+}
+
+#home {
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 /* ********** FUNCIONALITIES ********** */
@@ -113,9 +115,7 @@ h3 {
 
 form  {
   flex-wrap: wrap;
-  align-items: center;
-  text-align: left;
-  width: 100%;
+  justify-content: space-between;
 }
 
 input {
@@ -144,14 +144,14 @@ textarea {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .block-forms {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 340px;
+  max-width: 46%;
+  min-width: 300px;
 }
 
 .container-buttom {
