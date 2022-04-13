@@ -28,6 +28,9 @@ header {
 
 .title-container {
   width: 80%;
+}
+
+.title-container p {
   font-weight: 700;
   font-size: 30px;
   line-height: 50px;

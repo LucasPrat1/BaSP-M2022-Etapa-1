@@ -23,6 +23,48 @@ h3 {
   padding-bottom: 15px;
 }
 
+form  {
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 10px;
+  width: 90%;
+  border-radius: 10px
+}
+
+label {
+  font-weight: bold;
+  padding: 10px;
+  width: 90%;
+}
+
+textarea {
+  padding: 10px;
+  margin: 10px 0px;
+  width: 90%;
+  border-radius: 10px;
+  text-align: left;
+  font-family: 'arial';
+  opacity: 70%;
+}
+
+#home {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#b-submit {
+  background-color: #AACE9B;
+  width: 140px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+#b-reset {
+  width: 140px;
+}
+
 .text-home {
   display: flex;
   flex-direction: column;
@@ -45,13 +87,7 @@ h3 {
   max-width: 250px;
 }
 
-#home {
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
 /* ********** FUNCIONALITIES ********** */
-
 .container-funcionalities {
   flex-wrap: wrap;
 }
@@ -77,7 +113,6 @@ h3 {
 }
 
 /* ********** WHY CHOSE US ********** */
-
 .container-whychoseus {
   flex-wrap: wrap;
 }
@@ -112,33 +147,6 @@ h3 {
 }
 
 /* ********** CONTACT ********** */
-
-form  {
-  flex-wrap: wrap;
-}
-
-input {
-  padding: 10px;
-  width: 90%;
-  border-radius: 10px
-}
-
-label {
-  font-weight: bold;
-  padding: 10px;
-  width: 90%;
-}
-
-textarea {
-  padding: 10px;
-  margin: 10px 0px;
-  width: 90%;
-  border-radius: 10px;
-  text-align: left;
-  font-family: 'arial';
-  opacity: 70%;
-}
-
 .container-names {
   display: flex;
   width: 90%;
@@ -149,7 +157,7 @@ textarea {
   width: 50%;
   display: flex;
   flex-direction: column;
-  min-width: 300PX;
+  min-width: 300px;
 }
 
 .container-buttom {
@@ -157,19 +165,7 @@ textarea {
   align-items: flex-start;
 }
 
-#b-submit {
-  background-color: #AACE9B;
-  width: 140px;
-  font-weight: 500;
-  margin-right: 10px;
-}
-
-#b-reset {
-  width: 140px;
-}
-
 /* ********** WHO WE ARE ********** */
-
 .whoweare {
   width: 70%;;
   padding: 20px;
@@ -186,7 +182,6 @@ textarea {
 }
 
 /* ********** LISTS ********** */
-
 .container-lists {
   flex-wrap: wrap;
   justify-content: space-around;
@@ -198,4 +193,3 @@ textarea {
   color: black;
   padding: 10px;
 }
-

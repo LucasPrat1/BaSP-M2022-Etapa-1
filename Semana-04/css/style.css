@@ -7,14 +7,6 @@ a:link, a:visited, a:active {
   text-decoration: none;
 }
 
-.list ul{
-  list-style-type:circle;
-}
-
-.list ol{
-  list-style-type:decimal;
-}
-
 .container {
   display: flex;
   justify-content: center;
@@ -47,18 +39,18 @@ a:link, a:visited, a:active {
 }
 
 @media (max-width:768px) {
-  h1 {
-    text-align: center;
+  p {
+    font-size: 14px;
   }
-  .subtitle {
-    text-align: center;
-  }
-  .p-home {
+  .text-home {
     text-align: center;
   }
 }
 @media (min-width:768px) {
-  .p-home {
+  p {
+    font-size: 16px;
+  }
+  .text-home {
     text-align: left;
   }
 }

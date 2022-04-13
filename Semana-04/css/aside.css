@@ -5,6 +5,15 @@ aside {
     background: #373867;
 }
 
+aside a {
+    color: white;
+    font-weight: bold;
+}
+
+aside a:hover {
+    color: #46A37C;
+}
+
 .container-aside {
     margin-top: 20px;
     display: flex;
@@ -21,13 +30,4 @@ aside {
     height: 30px;
     vertical-align: middle;
     margin-right: 10px;
-}
-
-aside a {
-    color: white;
-    font-weight: bold;
-}
-
-aside a:hover {
-    color: #46A37C;
 }
