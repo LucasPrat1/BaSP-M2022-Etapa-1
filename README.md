@@ -11,3 +11,12 @@ Added layout to landing page using css style sheet
 The css style sheet was modified with flexbox
 
 https://lucasprat1.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html
+
+## week 5
+first logic exercises solved in javascript
+
+https://lucasprat1.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html
+
+## week 6
+
+https://lucasprat1.github.io/BaSP-M2022-Etapa-1/Semana-06/views/index.html
