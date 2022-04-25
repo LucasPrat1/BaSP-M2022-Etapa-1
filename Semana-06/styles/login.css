@@ -35,11 +35,6 @@ form {
     position: static;
 }
 
-.correct {
-    display: flex;
-    color: green;
-}
-
 .error {
     display: flex;
     color: red;
@@ -48,3 +43,9 @@ form {
 .hide {
     display: none;
 }
+
+.container-form {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }

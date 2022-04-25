@@ -19,15 +19,16 @@ window.onload = function () {
 
   function emailFocus() {
     email.style.border = "3px solid grey";
-    emailDiv.textContent = "";
+    emailDiv.classList.add('hide');
   }
 
   function emailBlur() {
     mailIsValid = mailformat.test(email.value);
     if (!mailIsValid) {
-      emailDiv.textContent = "The email is invalid";
-      emailDiv.style.color = "red";
+      emailDiv.innerHTML = "The email is invalid";
+      emailDiv.classList.add('error');
       email.style.border = "3px solid red";
+      emailDiv.classList.remove('hide');
     } else {
       email.style.border = "3px solid green";
     }
@@ -35,15 +36,16 @@ window.onload = function () {
 
   function passwordFocus() {
     password.style.border = "3px solid grey";
-    passDiv.textContent = "";
+    passDiv.classList.add('hide');
   }
 
   function passwordBlur() {
     passIsValid = validatePassword()
     if (!passIsValid) {
-      passDiv.textContent = "The Password is invalid";
-      passDiv.style.color = "red";
+      passDiv.innerHTML = "The Password is invalid";
+      passDiv.classList.add('error');
       password.style.border = "3px solid red";
+      passDiv.classList.remove('hide')
     } else {
       password.style.border = "3px solid green";
     }
@@ -73,7 +75,7 @@ window.onload = function () {
     } else if (!passIsValid) {
       alert(password.value + " Password incorrect");
     } else if (mailIsValid && passIsValid) {
-      alert("successfull login - Email: " + email.value + "Password: " + password.value);
+      alert("Successfull login \nEmail: " + email.value + "\nPassword: " + password.value);
     }
   }
 }

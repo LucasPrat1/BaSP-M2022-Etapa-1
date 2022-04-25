@@ -38,6 +38,7 @@ window.onload = function () {
   inputRepeatPassword.addEventListener("focus", RepeatPasswordFocus);
   inputBSignUp.addEventListener("click", BSignUpBlur);
 
+// ------------ VALIDATE NAME ---------------
   function validateName(name) {
     var flag = true;
     var i = 0
@@ -64,7 +65,6 @@ window.onload = function () {
       inputFName.style.border = "3px solid red";
     } else {
       msgContainer[0].classList.remove('error');
-      msgContainer[0].classList.add('correct');
       inputFName.style.border = "3px solid green";
     }
   }
@@ -83,7 +83,6 @@ window.onload = function () {
       inputLName.style.border = "3px solid red";
     } else {
       msgContainer[1].classList.remove('error');
-      msgContainer[1].classList.add('correct');
       inputLName.style.border = "3px solid green";
     }
   }
@@ -93,6 +92,41 @@ window.onload = function () {
     inputLName.style.border = "3px solid grey";
   }
 
+  // ------------ DNI ---------------
+  function validateDni() {
+    var flag = true;
+    var i = 0
+  
+    if (inputDni.value.length > 7) {
+      while (i < inputDni.value.length && flag === true) {
+        if (isNaN(inputDni.value[i])) {
+          flag = false;
+        }
+        i ++;
+      }
+    } else {
+      flag = false;
+    }
+  return flag;
+  }
+
+
+  function DniBlur() {
+    if (!validateDni()) {
+      msgContainer[2].classList.remove('hide');
+      msgContainer[2].classList.add('error');
+      msgContainer[2].innerHTML = "DNI incorrect";
+      inputDni.style.border = "3px solid red";
+    } else {
+      msgContainer[2].classList.remove('error');
+      inputDni.style.border = "3px solid green";
+    }
+  }
+
+  function DniFocus() {
+    msgContainer[2].classList.add('hide');
+    inputDni.style.border = "3px solid grey";
+  }
 
 
     
