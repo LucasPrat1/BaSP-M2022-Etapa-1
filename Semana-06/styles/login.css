@@ -3,7 +3,7 @@ input {
     width: 80%;
     border-radius: 10px
 }
-  
+
 label {
     font-weight: bold;
     padding: 10px;
@@ -32,5 +32,19 @@ form {
 }
 
 .logo-container {
-    position:static;
-  }
+    position: static;
+}
+
+.correct {
+    display: flex;
+    color: green;
+}
+
+.error {
+    display: flex;
+    color: red;
+}
+
+.hide {
+    display: none;
+}
