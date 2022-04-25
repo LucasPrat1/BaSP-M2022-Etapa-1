@@ -65,6 +65,10 @@ textarea {
   width: 140px;
 }
 
+.logo-container {
+  position: fixed;
+}
+
 .text-home {
   display: flex;
   flex-direction: column;

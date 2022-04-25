@@ -40,7 +40,6 @@ header {
 
 .logo-container {
   justify-content: center;
-  position: fixed;
   width: 20%;
   height: 100px;
   background-color: #C4C4C4;

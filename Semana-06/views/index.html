@@ -1,238 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Trackgenix SA</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="stylesheet" type="text/css" href="./css/reset.css">
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-        <link rel="stylesheet" type="text/css" href="./css/header.css">
-        <link rel="stylesheet" type="text/css" href="./css/aside.css">
-        <link rel="stylesheet" type="text/css" href="./css/main.css">
-        <link rel="stylesheet" type="text/css" href="./css/footer.css">
-    </head>
-    <body>
-        <header>
-            <div class="burger-container">
-                <div class="backgraound-burger">
-                    <img src="./assets/hamburguer.png" alt="Menu">
-                </div>
-            </div>
-            <div class="logo-container">
-                <img src="./assets/header.png" alt="Logo">
-            </div>
-            <div class="title-container">
-                <p>Trackgenix SA</p>
-            </div>
-        </header>
-        <aside>
-            <div class="container-aside">
-                <div class="menu-aside">
-                    <a href="#home">
-                        <img src="./assets/home.png" alt="home">
-                        Home
-                    </a>
-                </div>
-                <div class="menu-aside">
-                    <a href="">
-                        <img src="./assets/login.png" alt="Sign In">
-                        Sign In
-                    </a>
-                </div>
-                <div class="menu-aside">
-                    <a href="">
-                        <img src="./assets/login.png" alt="Sign Up">
-                        Sign Up
-                    </a>
-                </div>
-                <div class="menu-aside">
-                    <a href="#contact">
-                        <img src="./assets/contact.png" alt="contact">
-                        Contact
-                    </a>
-                </div>
-            </div>
-        </aside>
-        <main>
-            <section id="home" class="container">
-                <div class="text-home">
-                    <h1>Hi, we are Trackgenix</h1>
-                    <p class="subtitle">THE BEST CHOICE FOR YOUR BUSINESS</p>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                        industry's tandard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                        scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the industry's tandard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                </div>
-                <img class="img-home" src="./assets/computer.png" alt="computer">
-            </section>
-            <section class="container container-funcionalities">
-                <div class="funcionalities">
-                    <h2>Hours</h2>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                </div>
-                <div class="funcionalities">
-                    <h2>Reports</h2>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                </div>
-                <div class="funcionalities">
-                    <h2>Resource Management</h2>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                </div>
-                <div class="funcionalities">
-                    <h2>Multiple Roles</h2>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                </div>
-            </section>
-            <section class="container container-whychoseus">
-                <div class="whychoseus">
-                    <div class="background-icon">
-                        <img src="./assets/icon-work-traceability.png" alt="Work Traceability">
-                    </div>
-                    <div class="text-whychoseus">
-                        <h3>Work Traceability</h3>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        </p>
-                    </div>
-                </div>
-                <div class="whychoseus">
-                    <div class="text-whychoseus">
-                        <h3>Productivity Booster</h3>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        </p>
-                    </div>
-                    <div class="background-icon">
-                        <img src="./assets/icon-Productivity-booster.png" alt="Productivity">
-                    </div>
-                </div>
-                <div class="whychoseus">
-                    <div class="background-icon">
-                        <img src="./assets/icon-decision-making.png" alt="Decision Making">
-                    </div>
-                    <div class="text-whychoseus">
-                        <h3>Decision Making</h3>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        </p>
-                    </div>
-                </div>
-                <div class="whychoseus">
-                    <div class="text-whychoseus">
-                        <h3>Leadership and team management</h3>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        </p>
-                    </div>
-                    <div class="background-icon">
-                        <img src="./assets/icon-leadership.png" alt="Leadership">
-                    </div>
-                </div>
-            </section>
-            <section id="contact">
-                <h2>Contact us for information about the system</h2>
-                <form class="container">
-                    <div class="container-names">
-                        <div class="block-forms">
-                            <label for="fname">First Name</label>
-                            <input type="text" name="fname" required placeholder="Juan">
-                        </div>
-                        <div class="block-forms">    
-                            <label for="lname">Last Name</label>
-                            <input type="text" name="lname" required placeholder="Perez">
-                        </div>
-                    </div>
-                    <label for="email">Email</label>
-                    <input type="email" required placeholder="example@gmail.com">
-                    <label for="contarea">Contact area</label>
-                    <input list="area" name="contarea" required placeholder="Contact Area">
-                    <datalist id="area">
-                        <option value="Sales">
-                        <option value="Marketing">
-                        <option value="Human Resources">
-                        <option value="Development">
-                    </datalist>
-                    <textarea name="message" cols="30" rows="10" required>insert your message here</textarea>
-                    <div class="container-buttom">
-                        <input id="b-submit" type="submit" value="Submit">
-                        <input id="b-reset" type="reset" value="Reset">
-                    </div>
-                </form>
-            </section>
-            <section class="container">
-                <div class="whoweare">
-                    <h2>Who we are</h2>
-                    <p>
-                        RR time tracker is a web platform that help to manage time at work.
-                    </p>
-                    <p>
-                        What type of application do you have in mind?
-                    </p>
-                    <p>
-                        We are providing you with the core UI kit needed to kickstart your design and development while also
-                        allowing you to add new functionalities to the existing capabilities.
-                    </p>
-                </div>
-            </section>
-            <section class="container container-lists">
-                <div class="list">
-                    <h3>Product</h3>
-                    <ol>
-                        <li>Help</li>
-                        <li>tutorials</li>
-                        <li>API</li>
-                        <li>contact</li>
-                    </ol>
-                </div>
-                <div class="list">
-                    <h3>Company</h3>
-                    <ol>
-                        <li>About us</li>
-                        <li>Clients</li>
-                        <li>Resource</li>
-                        <li>Blog</li>
-                    </ol>
-                </div>
-                <div class="list">
-                    <h3>Support</h3>
-                    <ul>
-                        <li>Functionalities</li>
-                        <li>Downloads</li>
-                        <li>Integrations</li>
-                        <li>additionals features</li>
-                    </ul>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="container-social">
-                <a href="https://www.linkedin.com/in/radium-rocket/" target="_blank">
-                    <img src="./assets/in.png" alt="Linkedin">
-                </a>
-                <a href="https://www.facebook.com/radiumrocket?_rdc=1&_rdr" target="_blank">
-                    <img src="./assets/fcb.png" alt="Facebook">
-                </a>
-                <a href="https://twitter.com/radiumrocket" target="_blank">
-                    <img src="./assets/twt.png" alt="Twitter">
-                </a>
-                <a href="https://www.instagram.com/radium.rocket/" target="_blank">
-                    <img src="./assets/insta.png" alt="instagram">
-                </a>
-            </div>
-            <p>Copyright © 2022 Trackgenix S.A. All rigths reserved.</p>
-        </footer>
-    </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trackgenix SA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" type="text/css" href="../styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="../styles/style.css">
+  <link rel="stylesheet" type="text/css" href="../styles/landing.css">
+  <link rel="stylesheet" type="text/css" href="../styles/header.css">
+  <link rel="stylesheet" type="text/css" href="../styles/sidebar.css">
+  <link rel="stylesheet" type="text/css" href="../styles/footer.css">
+</head>
+
+<body>
+  <header>
+    <div class="burger-container">
+      <div class="backgraound-burger">
+        <img src="../assets/hamburguer.png" alt="Menu">
+      </div>
+    </div>
+    <div class="logo-container">
+      <img src="../assets/header.png" alt="Logo">
+    </div>
+    <div class="title-container">
+      <p>Trackgenix SA</p>
+    </div>
+  </header>
+  <aside>
+    <div class="container-aside">
+      <div class="menu-aside">
+        <a href="#home">
+          <img src="../assets/home.png" alt="home">
+          Home
+        </a>
+      </div>
+      <div class="menu-aside">
+        <a href="./login.html">
+          <img src="../assets/login.png" alt="Sign In">
+          Sign In
+        </a>
+      </div>
+      <div class="menu-aside">
+        <a href="./sign-up.html">
+          <img src="../assets/login.png" alt="Sign Up">
+          Sign Up
+        </a>
+      </div>
+      <div class="menu-aside">
+        <a href="#contact">
+          <img src="../assets/contact.png" alt="contact">
+          Contact
+        </a>
+      </div>
+    </div>
+  </aside>
+  <main>
+    <section id="home" class="container">
+      <div class="text-home">
+        <h1>Hi, we are Trackgenix</h1>
+        <p class="subtitle">THE BEST CHOICE FOR YOUR BUSINESS</p>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's tandard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's tandard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+      </div>
+      <img class="img-home" src="../assets/computer.png" alt="computer">
+    </section>
+    <section class="container container-funcionalities">
+      <div class="funcionalities">
+        <h2>Hours</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </p>
+      </div>
+      <div class="funcionalities">
+        <h2>Reports</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </p>
+      </div>
+      <div class="funcionalities">
+        <h2>Resource Management</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </p>
+      </div>
+      <div class="funcionalities">
+        <h2>Multiple Roles</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </p>
+      </div>
+    </section>
+    <section class="container container-whychoseus">
+      <div class="whychoseus">
+        <div class="background-icon">
+          <img src="../assets/icon-work-traceability.png" alt="Work Traceability">
+        </div>
+        <div class="text-whychoseus">
+          <h3>Work Traceability</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+        </div>
+      </div>
+      <div class="whychoseus">
+        <div class="text-whychoseus">
+          <h3>Productivity Booster</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+        </div>
+        <div class="background-icon">
+          <img src="../assets/icon-Productivity-booster.png" alt="Productivity">
+        </div>
+      </div>
+      <div class="whychoseus">
+        <div class="background-icon">
+          <img src="../assets/icon-decision-making.png" alt="Decision Making">
+        </div>
+        <div class="text-whychoseus">
+          <h3>Decision Making</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+        </div>
+      </div>
+      <div class="whychoseus">
+        <div class="text-whychoseus">
+          <h3>Leadership and team management</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </p>
+        </div>
+        <div class="background-icon">
+          <img src="../assets/icon-leadership.png" alt="Leadership">
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact us for information about the system</h2>
+      <form class="container">
+        <div class="container-names">
+          <div class="block-forms">
+            <label for="fname">First Name</label>
+            <input type="text" name="fname" required placeholder="Juan">
+          </div>
+          <div class="block-forms">
+            <label for="lname">Last Name</label>
+            <input type="text" name="lname" required placeholder="Perez">
+          </div>
+        </div>
+        <label for="email">Email</label>
+        <input type="email" required placeholder="example@gmail.com">
+        <label for="contarea">Contact area</label>
+        <input list="area" name="contarea" required placeholder="Contact Area">
+        <datalist id="area">
+          <option value="Sales">
+          <option value="Marketing">
+          <option value="Human Resources">
+          <option value="Development">
+        </datalist>
+        <textarea name="message" cols="30" rows="10" required>insert your message here</textarea>
+        <div class="container-buttom">
+          <input id="b-submit" type="submit" value="Submit">
+          <input id="b-reset" type="reset" value="Reset">
+        </div>
+      </form>
+    </section>
+    <section class="container">
+      <div class="whoweare">
+        <h2>Who we are</h2>
+        <p>
+          RR time tracker is a web platform that help to manage time at work.
+        </p>
+        <p>
+          What type of application do you have in mind?
+        </p>
+        <p>
+          We are providing you with the core UI kit needed to kickstart your design and development while also
+          allowing you to add new functionalities to the existing capabilities.
+        </p>
+      </div>
+    </section>
+    <section class="container container-lists">
+      <div class="list">
+        <h3>Product</h3>
+        <ol>
+          <li>Help</li>
+          <li>tutorials</li>
+          <li>API</li>
+          <li>contact</li>
+        </ol>
+      </div>
+      <div class="list">
+        <h3>Company</h3>
+        <ol>
+          <li>About us</li>
+          <li>Clients</li>
+          <li>Resource</li>
+          <li>Blog</li>
+        </ol>
+      </div>
+      <div class="list">
+        <h3>Support</h3>
+        <ul>
+          <li>Functionalities</li>
+          <li>Downloads</li>
+          <li>Integrations</li>
+          <li>additionals features</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container-social">
+      <a href="https://www.linkedin.com/in/radium-rocket/" target="_blank">
+        <img src="../assets/in.png" alt="Linkedin">
+      </a>
+      <a href="https://www.facebook.com/radiumrocket?_rdc=1&_rdr" target="_blank">
+        <img src="../assets/fcb.png" alt="Facebook">
+      </a>
+      <a href="https://twitter.com/radiumrocket" target="_blank">
+        <img src="../assets/twt.png" alt="Twitter">
+      </a>
+      <a href="https://www.instagram.com/radium.rocket/" target="_blank">
+        <img src="../assets/insta.png" alt="instagram">
+      </a>
+    </div>
+    <p>Copyright © 2022 Trackgenix S.A. All rigths reserved.</p>
+  </footer>
+</body>
+
 </html>
