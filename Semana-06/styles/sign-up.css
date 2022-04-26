@@ -1,26 +1,26 @@
 input {
     padding: 10px;
-    width: 80%;
+    width: 90%;
     border-radius: 10px
 }
 
 label {
     font-weight: bold;
     padding: 10px;
-    width: 80%;
+    width: 90%;
 }
 
 form {
     margin: 5% 0%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     width: 60%;
-    max-width: 500px;
     padding: 20px;
     background: #F3F3F3;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.47);
     border-radius: 22px;
+    justify-content: space-around;
 }
 
 #b-signup {
@@ -30,6 +30,12 @@ form {
     width: 140px;
     font-weight: 500;
 }
+
+.group-input {
+    max-width: 45%;
+}
+
+
 
 .logo-container {
     position: static;

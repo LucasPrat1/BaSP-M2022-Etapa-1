@@ -38,25 +38,25 @@ window.onload = function () {
   inputRepeatPassword.addEventListener("focus", RepeatPasswordFocus);
   inputBSignUp.addEventListener("click", BSignUpBlur);
 
-// ------------ VALIDATE NAME ---------------
+  // ------------ VALIDATE NAME ---------------
   function validateName(name) {
     var flag = true;
-    var i = 0
-  
+    var i = 0;
+
     if (name.length > 3) {
       while (i < name.length && flag === true) {
         if (!isNaN(name[i])) {
           flag = false;
         }
-        i ++;
+        i++;
       }
     } else {
       flag = false;
     }
-  return flag;
+    return flag;
   }
 
-// ------------ FIRST NAME ---------------
+  // ------------ FIRST NAME ---------------
   function FNameBlur() {
     if (!validateName(inputFName.value)) {
       msgContainer[0].classList.remove('hide');
@@ -96,20 +96,19 @@ window.onload = function () {
   function validateDni() {
     var flag = true;
     var i = 0
-  
+
     if (inputDni.value.length > 7) {
       while (i < inputDni.value.length && flag === true) {
         if (isNaN(inputDni.value[i])) {
           flag = false;
         }
-        i ++;
+        i++;
       }
     } else {
       flag = false;
     }
-  return flag;
+    return flag;
   }
-
 
   function DniBlur() {
     if (!validateDni()) {
@@ -128,10 +127,51 @@ window.onload = function () {
     inputDni.style.border = "3px solid grey";
   }
 
+  // ------------ dateOfBirth ---------------
+  function validateDoF() {
+    if (new Date(inputDateOfBirth.value).getTime() > new Date().getTime()) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 
-    
+  function DateOfBirthBlur() {
+    if (!validateDoF()) {
+      msgContainer[3].classList.remove('hide');
+      msgContainer[3].classList.add('error');
+      msgContainer[3].innerHTML = "Date of birth incorrect";
+      inputDateOfBirth.style.border = "3px solid red";
+    } else {
+      msgContainer[3].classList.remove('error');
+      inputDateOfBirth.style.border = "3px solid green";
+    }
+  }
+
+  function DateOfBirthFocus() {
+    msgContainer[3].classList.add('hide');
+    inputDateOfBirth.style.border = "3px solid grey";
   }
 
 
 
+}
+
+
+
+
+
+
+
+/*   novalidate */
+
+/*   const dob = document.getElementById("dob");
+
+  dob.onblur = function () {
+    if(new Date(dob.value).getTime() > new Date().getTime()) {
+      console.log("No paso")
+    } else {
+      console.log("Paso")
+    }
+  } */
 
