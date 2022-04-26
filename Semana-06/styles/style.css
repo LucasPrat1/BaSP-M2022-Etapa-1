@@ -24,12 +24,6 @@ a:link, a:visited, a:active {
 }
 
 @media (min-width:1024px) {
-  main {
-    margin-left: 20%;
-  }
-  footer {
-    margin-left: 20%;
-  }
   .logo-container {
     display: flex;
   }

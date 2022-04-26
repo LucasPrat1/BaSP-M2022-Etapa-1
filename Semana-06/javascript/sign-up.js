@@ -14,6 +14,7 @@ window.onload = function () {
   var inputBSignUp = document.getElementById("b-signup");
   var msgContainer = document.getElementsByClassName("msg-container");
 
+
   inputFName.addEventListener("blur", FNameBlur);
   inputFName.addEventListener("focus", FNameFocus);
   inputLName.addEventListener("blur", LNameBlur);
@@ -153,6 +154,224 @@ window.onload = function () {
     inputDateOfBirth.style.border = "3px solid grey";
   }
 
+  // ------------ Phone ---------------
+  function validatePhone() {
+    var flag = true;
+    var i = 0
+
+    if (inputPhone.value.length === 10) {
+      while (i < inputPhone.value.length && flag === true) {
+        if (isNaN(inputPhone.value[i])) {
+          flag = false;
+        }
+        i++;
+      }
+    } else {
+      flag = false;
+    }
+    return flag;
+  }
+
+  function PhoneBlur() {
+    if (!validatePhone()) {
+      msgContainer[4].classList.remove('hide');
+      msgContainer[4].classList.add('error');
+      msgContainer[4].innerHTML = "Phone number incorrect";
+      inputPhone.style.border = "3px solid red";
+    } else {
+      msgContainer[4].classList.remove('error');
+      inputPhone.style.border = "3px solid green";
+    }
+  }
+
+  function PhoneFocus() {
+    msgContainer[4].classList.add('hide');
+    inputPhone.style.border = "3px solid grey";
+  }
+
+  // ------------ Adress ---------------
+  function validateAdress() {
+    indexSpace = inputAdress.value.lastIndexOf(" ");
+    if (inputAdress.value.length > 4) {
+      if (indexSpace > 0) {
+        if (!isNaN(inputAdress.value.slice(indexSpace))) {
+          return true;
+        }
+        else {
+          return false;
+        }
+      }
+      else {
+        return false;
+      }
+    }
+    else {
+      return false;
+    }
+  }
+
+  function AdressBlur() {
+    if (!validateAdress()) {
+      msgContainer[5].classList.remove('hide');
+      msgContainer[5].classList.add('error');
+      msgContainer[5].innerHTML = "Adress incorrect";
+      inputAdress.style.border = "3px solid red";
+    } else {
+      msgContainer[5].classList.remove('error');
+      inputAdress.style.border = "3px solid green";
+    }
+  }
+
+  function AdressFocus() {
+    msgContainer[5].classList.add('hide');
+    inputAdress.style.border = "3px solid grey";
+  }
+
+  // ------------  CITY ---------------
+  function validateCity() {
+    if (inputCity.value.length > 3) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function CityBlur() {
+    if (!validateCity(inputCity.value)) {
+      msgContainer[6].classList.remove('hide');
+      msgContainer[6].classList.add('error');
+      msgContainer[6].innerHTML = "City incorrect";
+      inputCity.style.border = "3px solid red";
+    } else {
+      msgContainer[6].classList.remove('error');
+      inputCity.style.border = "3px solid green";
+    }
+  }
+
+  function CityFocus() {
+    msgContainer[6].classList.add('hide');
+    inputCity.style.border = "3px solid grey";
+  }
+
+  // ------------ Post Code ---------------
+  function validatePostCode() {
+    var flag = true;
+    var i = 0
+
+    if (inputPostCode.value.length >= 4 && inputPostCode.value.length <= 5) {
+      while (i < inputPostCode.value.length && flag === true) {
+        if (isNaN(inputPostCode.value[i])) {
+          flag = false;
+        }
+        i++;
+      }
+    } else {
+      flag = false;
+    }
+    return flag;
+  }
+
+  function PostCodeBlur() {
+    if (!validatePostCode()) {
+      msgContainer[7].classList.remove('hide');
+      msgContainer[7].classList.add('error');
+      msgContainer[7].innerHTML = "Post code incorrect";
+      inputPostCode.style.border = "3px solid red";
+    } else {
+      msgContainer[7].classList.remove('error');
+      inputPostCode.style.border = "3px solid green";
+    }
+  }
+
+  function PostCodeFocus() {
+    msgContainer[7].classList.add('hide');
+    inputPostCode.style.border = "3px solid grey";
+  }
+
+  // ------------ Email ---------------
+
+  function validateEmail() {
+    var mailformat = /[A-Za-z0-9]+@[A-Za-z]+\.[A-Za-z]{2,3}/;
+    if (mailformat.test(inputEmail.value)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function EmailBlur() {
+    if (!validateEmail()) {
+      msgContainer[8].classList.remove('hide');
+      msgContainer[8].classList.add('error');
+      msgContainer[8].innerHTML = "Email incorrect";
+      inputEmail.style.border = "3px solid red";
+    } else {
+      msgContainer[8].classList.remove('error');
+      inputEmail.style.border = "3px solid green";
+    }
+  }
+
+  function EmailFocus() {
+    msgContainer[8].classList.add('hide');
+    inputEmail.style.border = "3px solid grey";
+  }
+
+  // ------------ Password ---------------
+  function validatePassword(pass) {
+    var letterSum = 0;
+    var numberSum = 0;
+
+    if (pass.length < 7) {
+      return false;
+    } else {
+      for (i = 0; i < pass.length; i++) {
+        if (isNaN(pass[i])) {
+          letterSum += 1;
+        } else {
+          numberSum += 1;
+        }
+      }
+    }
+    return (letterSum !== 0 && numberSum !== 0)
+  }
+
+  function PasswordBlur() {
+    if (!validatePassword(inputPassword.value)) {
+      msgContainer[9].classList.remove('hide');
+      msgContainer[9].classList.add('error');
+      msgContainer[9].innerHTML = "Password incorrect";
+      inputPassword.style.border = "3px solid red";
+    } else {
+      msgContainer[9].classList.remove('error');
+      inputPassword.style.border = "3px solid green";
+    }
+  }
+
+  function PasswordFocus() {
+    msgContainer[9].classList.add('hide');
+    inputPassword.style.border = "3px solid grey";
+  }
+
+  function RepeatPasswordBlur() {
+    if (!validatePassword(inputRepeatPassword.value) || inputRepeatPassword.value !== inputPassword.value) {
+      msgContainer[10].classList.remove('hide');
+      msgContainer[10].classList.add('error');
+      msgContainer[10].innerHTML = "Password incorrect";
+      inputRepeatPassword.style.border = "3px solid red";
+    } else {
+      msgContainer[10].classList.remove('error');
+      inputRepeatPassword.style.border = "3px solid green";
+    }
+  }
+
+  function RepeatPasswordFocus() {
+    msgContainer[10].classList.add('hide');
+    inputRepeatPassword.style.border = "3px solid grey";
+  }
+
+
+
+
 
 
 }
@@ -163,15 +382,6 @@ window.onload = function () {
 
 
 
-/*   novalidate */
+/*   ---- cartel modal w3 css modal*/
 
-/*   const dob = document.getElementById("dob");
-
-  dob.onblur = function () {
-    if(new Date(dob.value).getTime() > new Date().getTime()) {
-      console.log("No paso")
-    } else {
-      console.log("Paso")
-    }
-  } */
 
