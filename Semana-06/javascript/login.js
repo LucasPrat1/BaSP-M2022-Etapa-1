@@ -10,13 +10,6 @@ window.onload = function () {
   var mailIsValid = false;
   var passIsValid = false;
 
-  email.addEventListener("focus", emailFocus);
-  email.addEventListener("blur", emailBlur);
-  password.addEventListener("focus", passwordFocus);
-  password.addEventListener("blur", passwordBlur);
-  signIn.addEventListener("click", signInClick);
-
-
   function emailFocus() {
     email.style.border = "3px solid grey";
     emailDiv.classList.add('hide');
@@ -78,4 +71,10 @@ window.onload = function () {
       alert("Successfull login \nEmail: " + email.value + "\nPassword: " + password.value);
     }
   }
+  
+  email.addEventListener("focus", emailFocus);
+  email.addEventListener("blur", emailBlur);
+  password.addEventListener("focus", passwordFocus);
+  password.addEventListener("blur", passwordBlur);
+  signIn.addEventListener("click", signInClick);
 }

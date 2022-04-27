@@ -5,7 +5,7 @@ window.onload = function () {
   var inputDni = document.getElementById("dni");
   var inputDateOfBirth = document.getElementById("dateOfBirth");
   var inputPhone = document.getElementById("phone");
-  var inputAdress = document.getElementById("adress");
+  var inputaddress = document.getElementById("address");
   var inputCity = document.getElementById("city");
   var inputPostCode = document.getElementById("postCode");
   var inputEmail = document.getElementById("email");
@@ -13,31 +13,6 @@ window.onload = function () {
   var inputRepeatPassword = document.getElementById("repeatPassword");
   var inputBSignUp = document.getElementById("b-signup");
   var msgContainer = document.getElementsByClassName("msg-container");
-
-
-  inputFName.addEventListener("blur", FNameBlur);
-  inputFName.addEventListener("focus", FNameFocus);
-  inputLName.addEventListener("blur", LNameBlur);
-  inputLName.addEventListener("focus", LNameFocus);
-  inputDni.addEventListener("blur", DniBlur);
-  inputDni.addEventListener("focus", DniFocus);
-  inputDateOfBirth.addEventListener("blur", DateOfBirthBlur);
-  inputDateOfBirth.addEventListener("focus", DateOfBirthFocus);
-  inputPhone.addEventListener("blur", PhoneBlur);
-  inputPhone.addEventListener("focus", PhoneFocus);
-  inputAdress.addEventListener("blur", AdressBlur);
-  inputAdress.addEventListener("focus", AdressFocus);
-  inputCity.addEventListener("blur", CityBlur);
-  inputCity.addEventListener("focus", CityFocus);
-  inputPostCode.addEventListener("blur", PostCodeBlur);
-  inputPostCode.addEventListener("focus", PostCodeFocus);
-  inputEmail.addEventListener("blur", EmailBlur);
-  inputEmail.addEventListener("focus", EmailFocus);
-  inputPassword.addEventListener("blur", PasswordBlur);
-  inputPassword.addEventListener("focus", PasswordFocus);
-  inputRepeatPassword.addEventListener("blur", RepeatPasswordBlur);
-  inputRepeatPassword.addEventListener("focus", RepeatPasswordFocus);
-  inputBSignUp.addEventListener("click", BSignUpBlur);
 
   // ------------ VALIDATE NAME ---------------
   function validateName(name) {
@@ -189,12 +164,12 @@ window.onload = function () {
     inputPhone.style.border = "3px solid grey";
   }
 
-  // ------------ Adress ---------------
-  function validateAdress() {
-    indexSpace = inputAdress.value.lastIndexOf(" ");
-    if (inputAdress.value.length > 4) {
+  // ------------ address ---------------
+  function validateaddress() {
+    indexSpace = inputaddress.value.lastIndexOf(" ");
+    if (inputaddress.value.length > 4) {
       if (indexSpace > 0) {
-        if (!isNaN(inputAdress.value.slice(indexSpace))) {
+        if (!isNaN(inputaddress.value.slice(indexSpace))) {
           return true;
         }
         else {
@@ -210,21 +185,21 @@ window.onload = function () {
     }
   }
 
-  function AdressBlur() {
-    if (!validateAdress()) {
+  function addressBlur() {
+    if (!validateaddress()) {
       msgContainer[5].classList.remove('hide');
       msgContainer[5].classList.add('error');
-      msgContainer[5].innerHTML = "Adress incorrect";
-      inputAdress.style.border = "3px solid red";
+      msgContainer[5].innerHTML = "address incorrect";
+      inputaddress.style.border = "3px solid red";
     } else {
       msgContainer[5].classList.remove('error');
-      inputAdress.style.border = "3px solid green";
+      inputaddress.style.border = "3px solid green";
     }
   }
 
-  function AdressFocus() {
+  function addressFocus() {
     msgContainer[5].classList.add('hide');
-    inputAdress.style.border = "3px solid grey";
+    inputaddress.style.border = "3px solid grey";
   }
 
   // ------------  CITY ---------------
@@ -353,12 +328,19 @@ window.onload = function () {
   }
 
   function RepeatPasswordBlur() {
-    if (!validatePassword(inputRepeatPassword.value) || inputRepeatPassword.value !== inputPassword.value) {
+    if (!validatePassword(inputRepeatPassword.value)) {
       msgContainer[10].classList.remove('hide');
       msgContainer[10].classList.add('error');
       msgContainer[10].innerHTML = "Password incorrect";
       inputRepeatPassword.style.border = "3px solid red";
-    } else {
+    }
+    else if (inputRepeatPassword.value !== inputPassword.value) {
+      msgContainer[10].classList.remove('hide');
+      msgContainer[10].classList.add('error');
+      msgContainer[10].innerHTML = "Passwords not match";
+      inputRepeatPassword.style.border = "3px solid red";
+    }
+    else {
       msgContainer[10].classList.remove('error');
       inputRepeatPassword.style.border = "3px solid green";
     }
@@ -369,19 +351,76 @@ window.onload = function () {
     inputRepeatPassword.style.border = "3px solid grey";
   }
 
+  function BSignUpClick() {
+    if (!validateName(inputFName.value)) {
+      alert(inputFName.value + " First name incorrect");
+    } else if (!validateName(inputLName.value)) {
+      alert(inputLName.value + " Last name incorrect");
+    } else if (!validateDni()) {
+      alert(inputDni.value + " Dni incorrect");
+    } else if (!validateDoF()) {
+      alert(inputDateOfBirth.value + " Date of birth incorrect");
+    } else if (!validatePhone()) {
+      alert(inputPhone.value + " Phone number incorrect");
+    } else if (!validateaddress()) {
+      alert(inputaddress.value + " Address incorrect");
+    } else if (!validateCity()) {
+      alert(inputCity.value + " City incorrect");
+    } else if (!validatePostCode()) {
+      alert(inputPostCode.value + " Post code incorrect");
+    } else if (!validateEmail()) {
+      alert(inputEmail.value + " Email incorrect");
+    } else if (!validatePassword(inputPassword.value)) {
+      alert(inputPassword.value + " Password incorrect");
+    } else if (!validatePassword(inputRepeatPassword.value)) {
+      alert(inputPassword.value + " Repeat Password incorrect");
+    } else if (inputRepeatPassword.value !== inputPassword.value) {
+      alert(inputPassword.value + " Passwords not match");
 
+    } else if (validateName(inputFName.value) &&
+      validateName(inputLName.value) &&
+      validateDni() && validateDoF() &&
+      validatePhone() && validateaddress() &&
+      validateCity() && validatePostCode() &&
+      validateEmail() &&
+      validatePassword(inputPassword.value) &&
+      validatePassword(inputRepeatPassword.value) &&
+      inputRepeatPassword.value === inputPassword.value) 
+      {
+      alert("Successfull login \nFirst Name: " + inputFName.value +
+        "\nLast Name: " + inputLName.value +
+        "\nDni: " + inputDni.value +
+        "\nDate of Birth: " + inputDateOfBirth.value +
+        "\nPhone Number: " + inputPhone.value +
+        "\nAddress: " + inputaddress.value +
+        "\nCity: " + inputCity.value +
+        "\nPost Code: " + inputPostCode.value +
+        "\nEmail: " + inputEmail.value +
+        "\nPassword: " + inputPassword.value);
+    }
+  }
 
-
-
-
+  inputFName.addEventListener("blur", FNameBlur);
+  inputFName.addEventListener("focus", FNameFocus);
+  inputLName.addEventListener("blur", LNameBlur);
+  inputLName.addEventListener("focus", LNameFocus);
+  inputDni.addEventListener("blur", DniBlur);
+  inputDni.addEventListener("focus", DniFocus);
+  inputDateOfBirth.addEventListener("blur", DateOfBirthBlur);
+  inputDateOfBirth.addEventListener("focus", DateOfBirthFocus);
+  inputPhone.addEventListener("blur", PhoneBlur);
+  inputPhone.addEventListener("focus", PhoneFocus);
+  inputaddress.addEventListener("blur", addressBlur);
+  inputaddress.addEventListener("focus", addressFocus);
+  inputCity.addEventListener("blur", CityBlur);
+  inputCity.addEventListener("focus", CityFocus);
+  inputPostCode.addEventListener("blur", PostCodeBlur);
+  inputPostCode.addEventListener("focus", PostCodeFocus);
+  inputEmail.addEventListener("blur", EmailBlur);
+  inputEmail.addEventListener("focus", EmailFocus);
+  inputPassword.addEventListener("blur", PasswordBlur);
+  inputPassword.addEventListener("focus", PasswordFocus);
+  inputRepeatPassword.addEventListener("blur", RepeatPasswordBlur);
+  inputRepeatPassword.addEventListener("focus", RepeatPasswordFocus);
+  inputBSignUp.addEventListener("click", BSignUpClick);
 }
-
-
-
-
-
-
-
-/*   ---- cartel modal w3 css modal*/
-
-
