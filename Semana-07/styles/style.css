@@ -1,0 +1,53 @@
+body {
+  font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #373867;
+}
+
+a:link, a:visited, a:active {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px 20px 0px;
+  border-bottom: 1px solid black;
+}
+
+@media (max-width:1024px) {
+  aside {
+    display: none;
+  }
+  .logo-container {
+    display: none;
+  }
+}
+
+@media (min-width:1024px) {
+  .logo-container {
+    display: flex;
+  }
+  .burger-container {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  p {
+    font-size: 14px;
+  }
+  .text-home {
+    text-align: center;
+  }
+}
+@media (min-width:768px) {
+  p {
+    font-size: 16px;
+  }
+  .text-home {
+    text-align: left;
+  }
+}
+
+
+
