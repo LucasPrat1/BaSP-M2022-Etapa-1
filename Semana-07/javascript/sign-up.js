@@ -1,5 +1,4 @@
 window.onload = function () {
-
   var inputFName = document.getElementById("fname");
   var inputLName = document.getElementById("lname");
   var inputDni = document.getElementById("dni");
@@ -13,6 +12,8 @@ window.onload = function () {
   var inputRepeatPassword = document.getElementById("repeatPassword");
   var inputBSignUp = document.getElementById("b-signup");
   var msgContainer = document.getElementsByClassName("msg-container");
+  
+  // completeImput();
 
   // ------------ VALIDATE NAME ---------------
   function validateName(name) {
@@ -104,10 +105,18 @@ window.onload = function () {
   }
 
   // ------------ dateOfBirth ---------------
+  var formatDoB = ""
+
+  function formatDate(date) {
+    var arDate = date.split('-');
+    return arDate[1] + '/' + arDate[2] + '/' + arDate[0];
+  }
+
   function validateDoF() {
-    if (new Date(inputDateOfBirth.value).getTime() > new Date().getTime()) {
+    if (new Date(formatDate(inputDateOfBirth.value)).getTime() > new Date().getTime()) {
       return false;
     } else {
+      formatDoB = formatDate(inputDateOfBirth.value);
       return true;
     }
   }
@@ -351,7 +360,27 @@ window.onload = function () {
     inputRepeatPassword.style.border = "3px solid grey";
   }
 
-  function BSignUpClick() {
+  // ------------ Validate all ---------------
+  function validateAll() {
+    return (validateName(inputFName.value) &&
+      validateName(inputLName.value) &&
+      validateDni() && validateDoF() &&
+      validatePhone() && validateaddress() &&
+      validateCity() && validatePostCode() &&
+      validateEmail() &&
+      validatePassword(inputPassword.value) &&
+      validatePassword(inputRepeatPassword.value) &&
+      inputRepeatPassword.value === inputPassword.value)
+  }
+
+  function BSignUpClick(e) {
+    e.preventDefault()
+    var url = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${inputFName.value}
+&lastName=${inputLName.value}&dni=${inputDni.value}&dob=${formatDoB}&phone=${inputPhone.value}
+&address=${inputaddress.value}&city=${inputCity.value}&zip=${inputPostCode.value}&email=${inputEmail.value}
+&password=${inputPassword.value}`
+    console.log(validateAll())
+    console.log(url)
     if (!validateName(inputFName.value)) {
       alert(inputFName.value + " First name incorrect");
     } else if (!validateName(inputLName.value)) {
@@ -377,28 +406,61 @@ window.onload = function () {
     } else if (inputRepeatPassword.value !== inputPassword.value) {
       alert(inputPassword.value + " Passwords not match");
 
-    } else if (validateName(inputFName.value) &&
-      validateName(inputLName.value) &&
-      validateDni() && validateDoF() &&
-      validatePhone() && validateaddress() &&
-      validateCity() && validatePostCode() &&
-      validateEmail() &&
-      validatePassword(inputPassword.value) &&
-      validatePassword(inputRepeatPassword.value) &&
-      inputRepeatPassword.value === inputPassword.value) 
-      {
-      alert("Successfull login \nFirst Name: " + inputFName.value +
-        "\nLast Name: " + inputLName.value +
-        "\nDni: " + inputDni.value +
-        "\nDate of Birth: " + inputDateOfBirth.value +
-        "\nPhone Number: " + inputPhone.value +
-        "\nAddress: " + inputaddress.value +
-        "\nCity: " + inputCity.value +
-        "\nPost Code: " + inputPostCode.value +
-        "\nEmail: " + inputEmail.value +
-        "\nPassword: " + inputPassword.value);
+    } else if (validateAll()) {
+      fetch(url)
+        .then(function (response) {
+          return response.json()
+        })
+        .then(function (response) {
+          console.log("bien don carlos", response.msg)
+          alert(`${response.msg} \n
+            Employee ID: ${response.data.id}
+            First Name: ${response.data.name}
+            Last Name: ${response.data.lastName}
+            Dni: ${response.data.dni}
+            Date of Birth: ${response.data.dob}
+            Phone Number: ${response.data.phone}
+            Address: ${response.data.address}
+            City: ${response.data.city}
+            Post Code: ${response.data.zip}
+            Email: ${response.data.email}
+            Password: ${response.data.password}`);
+          setLocalStorage();
+        })
+        .catch(function (err) {
+          console.log("todo mal don carlos")
+          alert(`Error: ${err.errors[0].msg}`)
+        })
     }
   }
+
+
+  // ------------ Local Storage ---------------
+  function setLocalStorage() {
+    localStorage.setItem("name", inputFName.value)
+    localStorage.setItem("lastName", inputLName.value)
+    localStorage.setItem("dni", inputDni.value)
+    localStorage.setItem("dob", formatDoB)
+    localStorage.setItem("phone", inputPhone.value)
+    localStorage.setItem("address", inputaddress.value)
+    localStorage.setItem("city",inputCity.value)
+    localStorage.setItem("zip", inputPostCode.value)
+    localStorage.setItem("email", inputEmail.value)
+    localStorage.setItem("password", inputPassword.value)
+  }
+
+// function completeImput() {
+//   inputFName.value = localStorage.gatItem("name")
+//   inputDni.value = localStorage.gatItem("dni")
+//   inputDateOfBirth = localStorage.gatItem("dob")
+//   inputPhone.value = localStorage.gatItem("phone")
+//   inputaddress.value = localStorage.gatItem("address")
+//   inputCity.value = localStorage.gatItem("city")
+//   inputPostCode.value = localStorage.gatItem("zip")
+//   inputEmail.value = localStorage.gatItem("email")
+//   inputPassword.value = localStorage.gatItem("password") 
+// }
+
 
   inputFName.addEventListener("blur", FNameBlur);
   inputFName.addEventListener("focus", FNameFocus);
