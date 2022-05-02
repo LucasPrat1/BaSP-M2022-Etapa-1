@@ -82,11 +82,11 @@ window.onload = function () {
         })
         .then((response) => {
           modal.classList.remove('hide')
-          modalText.innerHTML = response.msg;
+          modalText.innerHTML = `<h2>MESSAGE:</h2><li>${response.msg}</li>`;
         })
         .catch((responseError) => {
           modal.classList.remove('hide')
-          modalText.innerHTML = responseError;
+          modalText.innerHTML = `<h2>FATAL ERROR:</h2><li>${responseError}</li>`;
         })
     }
   }

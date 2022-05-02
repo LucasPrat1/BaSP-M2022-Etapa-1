@@ -431,24 +431,19 @@ window.onload = function () {
           if (response.success) {
             console.log("entra then", response.msg);
             modal.classList.remove('hide')
-            modalText.innerHTML = (`<h2>${response.msg}</h2>
-            <li>Employee ID: ${response.data.id}</li>
-            <li>First Name: ${response.data.name}</li>
-            <li>Last Name: ${response.data.lastName}</li>
-            <li>Dni: ${response.data.dni}</li>
-            <li>Date of Birth: ${response.data.dob}</li>
-            <li>Phone Number: ${response.data.phone}</li>
-            <li>Address: ${response.data.address}</li>
-            <li>City: ${response.data.city}</li>
-            <li>Post Code: ${response.data.zip}</li>
-            <li>Email: ${response.data.email}</li>
-            <li>Password: ${response.data.password}</li>`)
+            modalText.innerHTML = `<h2>${response.msg}</h2>`;
+            for (var [key, value] of Object.entries(response.data)) {
+              modalText.innerHTML = `${modalText.innerHTML}<li>${key}: ${value}</li>`
+            }
             setLocalStorage();
           }
           else {
-            console.log("entro then error", response.msg);
-            modal.classList.remove('hide')
-            modalText.innerHTML = `<h2>ERROR: </h2>${response.errors[0].msg}`;
+            console.log("entro then error", response.errors);
+            modal.classList.remove('hide');
+            modalText.innerHTML = `<h2>ERROR</h2>`;
+            response.errors.forEach(err => {
+              modalText.innerHTML = `${modalText.innerHTML}<li>${err.msg}</li>`
+            });
           }
         })
         .catch((err) => {

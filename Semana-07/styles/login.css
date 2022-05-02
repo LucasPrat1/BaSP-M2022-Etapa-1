@@ -74,6 +74,13 @@ form {
     text-align: center;
 }
 
+.modal-content h2{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
 .close {
     color: #aaa;
     float: right;
