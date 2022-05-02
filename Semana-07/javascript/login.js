@@ -5,6 +5,9 @@ window.onload = function () {
   var password = document.getElementById("pass")
   var passDiv = document.getElementById("passDiv");
   var signIn = document.getElementById("b-signin");
+  var modal = document.getElementById("myModal");
+  var span = document.getElementsByClassName("close")[0];
+  var modalText = document.getElementById("modalText");
 
   var mailformat = /[A-Za-z0-9]+@[A-Za-z]+\.[A-Za-z]{2,3}/
   var mailIsValid = false;
@@ -65,6 +68,7 @@ window.onload = function () {
   function signInClick(e) {
     e.preventDefault()
     var url = `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${email.value}&password=${password.value}`
+    console.log(url)
     if (!mailIsValid) {
       alert(email.value + " Email incorrect");
     } else if (!passIsValid) {
@@ -74,12 +78,13 @@ window.onload = function () {
         .then(function (response) {
           return response.json()
         })
-        .then(function (response) {
-          alert(response.msg)
+        .then((response) => {
+          console.log(response.msg)
+          modal.style.display = "block";
+          modalText.innerHTML = response.msg;
         })
-        .catch(function (responseError) {
-          alert(responseError.errors[0].msg)
-
+        .catch((responseError) => {
+          alert(responseError);
         })
     }
   }
@@ -89,4 +94,15 @@ window.onload = function () {
   password.addEventListener("focus", passwordFocus);
   password.addEventListener("blur", passwordBlur);
   signIn.addEventListener("click", signInClick);
+
+  // ----- close modal -----
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 }
