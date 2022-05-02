@@ -12,6 +12,9 @@ window.onload = function () {
   var inputRepeatPassword = document.getElementById("repeatPassword");
   var inputBSignUp = document.getElementById("b-signup");
   var msgContainer = document.getElementsByClassName("msg-container");
+  var modal = document.getElementById("myModal");
+  var span = document.getElementsByClassName("close")[0];
+  var modalText = document.getElementById("modalText");
 
   if (localStorage.length > 0) {
     setInput();
@@ -383,60 +386,75 @@ window.onload = function () {
 &address=${inputaddress.value}&city=${inputCity.value}&zip=${inputPostCode.value}&email=${inputEmail.value}
 &password=${inputPassword.value}`
     if (!validateName(inputFName.value)) {
-      alert(inputFName.value + " First name incorrect");
+      modal.classList.remove('hide')
+      modalText.innerHTML = "<h2>ERROR: </h2>" + inputFName.value + " First name incorrect";
     } else if (!validateName(inputLName.value)) {
-      alert(inputLName.value + " Last name incorrect");
+      modal.classList.remove('hide')
+      modalText.innerHTML = "<h2>ERROR: </h2>" + inputLName.value + " Last name incorrect";
     } else if (!validateDni()) {
-      alert(inputDni.value + " Dni incorrect");
+      modal.classList.remove('hide')
+      modalText.innerHTML = "<h2>ERROR: </h2>" + inputDni.value + " Dni incorrect";
     } else if (!validateDoF()) {
-      alert(inputDateOfBirth.value + " Date of birth incorrect");
+      modal.classList.remove('hide')
+      modalText.innerHTML = "<h2>ERROR: </h2>" + inputDateOfBirth.value + " Date of birth incorrect";
     } else if (!validatePhone()) {
-      alert(inputPhone.value + " Phone number incorrect");
+      modal.classList.remove('hide')
+      modalText.innerHTML = "<h2>ERROR: </h2>" + inputPhone.value + " Phone number incorrect";
     } else if (!validateaddress()) {
-      alert(inputaddress.value + " Address incorrect");
+      modal.classList.remove('hide')
+      modalText.innerHTML = "<h2>ERROR: </h2>" + inputaddress.value + " Address incorrect";
     } else if (!validateCity()) {
-      alert(inputCity.value + " City incorrect");
+      modal.classList.remove('hide')
+      modalText.innerHTML = "<h2>ERROR: </h2>" + inputCity.value + " City incorrect";
     } else if (!validatePostCode()) {
-      alert(inputPostCode.value + " Post code incorrect");
+      modal.classList.remove('hide')
+      modalText.innerHTML = "<h2>ERROR: </h2>" + inputPostCode.value + " Post code incorrect";
     } else if (!validateEmail()) {
-      alert(inputEmail.value + " Email incorrect");
+      modal.classList.remove('hide')
+      modalText.innerHTML = "<h2>ERROR: </h2>" + inputEmail.value + " Email incorrect";
     } else if (!validatePassword(inputPassword.value)) {
-      alert(inputPassword.value + " Password incorrect");
+      modal.classList.remove('hide')
+      modalText.innerHTML = "<h2>ERROR: </h2>" + inputPassword.value + " Password incorrect";
     } else if (!validatePassword(inputRepeatPassword.value)) {
-      alert(inputPassword.value + " Repeat Password incorrect");
+      modal.classList.remove('hide')
+      modalText.innerHTML = "<h2>ERROR: </h2>" + inputPassword.value + " Repeat Password incorrect";
     } else if (inputRepeatPassword.value !== inputPassword.value) {
-      alert(inputPassword.value + " Passwords not match");
+      modal.classList.remove('hide')
+      modalText.innerHTML = "<h2>ERROR: </h2>" + inputPassword.value + " Passwords not match";
 
     } else if (validateAll()) {
       fetch(url)
         .then(function (response) {
           return response.json()
         })
-        .then( (response) => {
+        .then((response) => {
           if (response.success) {
             console.log("entra then", response.msg);
-            alert(`${response.msg}
-              Employee ID: ${response.data.id}
-              First Name: ${response.data.name}
-              Last Name: ${response.data.lastName}
-              Dni: ${response.data.dni}
-              Date of Birth: ${response.data.dob}
-              Phone Number: ${response.data.phone}
-              Address: ${response.data.address}
-              City: ${response.data.city}
-              Post Code: ${response.data.zip}
-              Email: ${response.data.email}
-              Password: ${response.data.password}`);
+            modal.classList.remove('hide')
+            modalText.innerHTML = (`<h2>${response.msg}</h2>
+            <li>Employee ID: ${response.data.id}</li>
+            <li>First Name: ${response.data.name}</li>
+            <li>Last Name: ${response.data.lastName}</li>
+            <li>Dni: ${response.data.dni}</li>
+            <li>Date of Birth: ${response.data.dob}</li>
+            <li>Phone Number: ${response.data.phone}</li>
+            <li>Address: ${response.data.address}</li>
+            <li>City: ${response.data.city}</li>
+            <li>Post Code: ${response.data.zip}</li>
+            <li>Email: ${response.data.email}</li>
+            <li>Password: ${response.data.password}</li>`)
             setLocalStorage();
           }
           else {
             console.log("entro then error", response.msg);
-            alert(response.errors[0].msg);
+            modal.classList.remove('hide')
+            modalText.innerHTML = `<h2>ERROR: </h2>${response.errors[0].msg}`;
           }
         })
         .catch((err) => {
           console.log("entro catch");
-          alert(err);
+          modal.classList.remove('hide')
+          modalText.innerHTML = err;
         })
     }
   }
@@ -467,6 +485,17 @@ window.onload = function () {
     inputEmail.setAttribute("value", localStorage.getItem("email"));
     inputPassword.setAttribute("value", localStorage.getItem("password"));
     inputRepeatPassword.setAttribute("value", localStorage.getItem("password"));
+  }
+
+  // ----- close modal -----
+  span.onclick = function () {
+    modal.classList.add('hide');
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.classList.add('hide');
+    }
   }
 
   // ------------ addEventListener ---------------
