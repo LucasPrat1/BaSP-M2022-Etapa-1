@@ -24,3 +24,8 @@ https://lucasprat1.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html
 We created Login and Sign-Up HTML files to introduce a logic with JS, and validations on the both forms. 
 
 https://lucasprat1.github.io/BaSP-M2022-Etapa-1/Semana-06/views/index.html
+
+## week 7
+We make the request for login and sign-up and upgrade message alert to modal
+
+https://lucasprat1.github.io/BaSP-M2022-Etapa-1/Semana-07/views/index.html
