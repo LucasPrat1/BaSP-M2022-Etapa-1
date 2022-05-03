@@ -84,9 +84,9 @@ window.onload = function () {
           modal.classList.remove('hide')
           modalText.innerHTML = `<h2>MESSAGE:</h2><li>${response.msg}</li>`;
         })
-        .catch((responseError) => {
+        .catch((Error) => {
           modal.classList.remove('hide')
-          modalText.innerHTML = `<h2>FATAL ERROR:</h2><li>${responseError}</li>`;
+          modalText.innerHTML = `<h2>FATAL ERROR:</h2><li>${Error}</li>`;
         })
     }
   }

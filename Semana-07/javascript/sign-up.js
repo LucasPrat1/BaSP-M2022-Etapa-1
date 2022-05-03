@@ -433,7 +433,7 @@ window.onload = function () {
             modal.classList.remove('hide')
             modalText.innerHTML = `<h2>${response.msg}</h2>`;
             for (var [key, value] of Object.entries(response.data)) {
-              modalText.innerHTML = `${modalText.innerHTML}<li>${key}: ${value}</li>`
+              modalText.innerHTML += `<li>${key}: ${value}</li>`
             }
             setLocalStorage();
           }
@@ -442,7 +442,7 @@ window.onload = function () {
             modal.classList.remove('hide');
             modalText.innerHTML = `<h2>ERROR</h2>`;
             response.errors.forEach(err => {
-              modalText.innerHTML = `${modalText.innerHTML}<li>${err.msg}</li>`
+              modalText.innerHTML += `<li>${err.msg}</li>`
             });
           }
         })
